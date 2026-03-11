@@ -1,0 +1,205 @@
+{
+  "identifier" : "A7E3B5F2-4C12-4D8A-9F1E-6B2C3D4E5F6A",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1234567890",
+    "_developerTeamID" : "XXXXXXXXXX",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
+      "localizations" : [
+
+      ],
+      "name" : "Sketchly Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "3.19",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "D0H6I8F4-7G15-6C1D-0E9F-3G4H5I6J7K8L",
+          "introductoryOffer" : {
+            "internalID" : "E1I7J9G5-8H16-7D2E-1F0G-4H5I6J7K8L9M",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Access all premium features with weekly billing",
+              "displayName" : "Weekly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.weekly",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Weekly Subscription",
+          "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "7.99",
+          "familyShareable" : true,
+          "groupNumber" : 2,
+          "internalID" : "F2J8K0H6-9I17-8E3F-2G1H-5I6J7K8L9M0N",
+          "introductoryOffer" : {
+            "internalID" : "G3K9L1I7-0J18-9F4G-3H2I-6J7K8L9M0N1O",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Access all premium features with monthly billing",
+              "displayName" : "Monthly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Subscription",
+          "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "15.99",
+          "familyShareable" : true,
+          "groupNumber" : 3,
+          "internalID" : "H4L0M2J8-1K19-0G5H-4I3J-7K8L9M0N1O2P",
+          "introductoryOffer" : {
+            "internalID" : "I5M1N3K9-2L20-1H6I-5J4K-8L9M0N1O2P3Q",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Access all premium features with yearly billing - Best Value",
+              "displayName" : "Yearly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Yearly Subscription",
+          "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "31.98",
+          "familyShareable" : true,
+          "groupNumber" : 4,
+          "internalID" : "J6N2O4L0-3M21-2I7J-6K5L-9M0N1O2P3Q4R",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "One-time purchase for lifetime access to all premium features",
+              "displayName" : "Lifetime Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.lifetime",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Lifetime Access",
+          "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
+          "type" : "NonRenewingSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		SK001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = SK101 /* Assets.xcassets */; };
+		SK002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = SK102 /* LaunchScreen.storyboard */; };
+		SK003 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = SK103 /* Configuration.storekit */; };
+		SK004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = SK104 /* GoogleService-Info.plist */; };
+
+		/* Sources */
+		SK010 /* SketchlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK110 /* SketchlyApp.swift */; };
+		SK011 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK111 /* ContentView.swift */; };
+
+		/* Models */
+		SK020 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK120 /* Models.swift */; };
+
+		/* Services */
+		SK030 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK130 /* StoreKitManager.swift */; };
+		SK031 /* PremiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK131 /* PremiumManager.swift */; };
+		SK032 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK132 /* AnalyticsService.swift */; };
+		SK033 /* ATTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK133 /* ATTService.swift */; };
+		SK034 /* AttributionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK134 /* AttributionManager.swift */; };
+		SK035 /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK135 /* ReviewManager.swift */; };
+		SK036 /* AIFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK136 /* AIFeedbackService.swift */; };
+		SK037 /* LessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK137 /* LessonService.swift */; };
+
+		/* ViewModels */
+		SK040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK140 /* OnboardingViewModel.swift */; };
+		SK041 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK141 /* DiscoverViewModel.swift */; };
+		SK042 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK142 /* LessonViewModel.swift */; };
+		SK043 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK143 /* PracticeViewModel.swift */; };
+		SK044 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK144 /* GalleryViewModel.swift */; };
+		SK045 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK145 /* ProgressViewModel.swift */; };
+
+		/* Views - Components */
+		SK050 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK150 /* HapticManager.swift */; };
+		SK051 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK151 /* EmptyStateView.swift */; };
+		SK052 /* PremiumBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK152 /* PremiumBadge.swift */; };
+		SK053 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK153 /* LessonCardView.swift */; };
+
+		/* Views - Onboarding */
+		SK060 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK160 /* OnboardingView.swift */; };
+
+		/* Views - Discover */
+		SK061 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK161 /* DiscoverView.swift */; };
+
+		/* Views - Lessons */
+		SK062 /* LessonBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK162 /* LessonBrowserView.swift */; };
+		SK063 /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK163 /* LessonDetailView.swift */; };
+		SK064 /* LessonCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK164 /* LessonCategoryView.swift */; };
+
+		/* Views - Practice */
+		SK065 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK165 /* PracticeView.swift */; };
+		SK066 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK166 /* DrawingCanvasView.swift */; };
+		SK067 /* AIFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK167 /* AIFeedbackView.swift */; };
+
+		/* Views - Gallery */
+		SK068 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK168 /* GalleryView.swift */; };
+		SK069 /* GalleryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK169 /* GalleryPostView.swift */; };
+
+		/* Views - Progress */
+		SK070 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK170 /* ProgressView.swift */; };
+		SK071 /* CurriculumTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK171 /* CurriculumTrackView.swift */; };
+
+		/* Views - Paywall & Settings */
+		SK072 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK172 /* PaywallView.swift */; };
+		SK073 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK173 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		SK101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		SK102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		SK103 /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
+		SK104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		SK105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		SK106 /* Sketchly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sketchly.entitlements; sourceTree = "<group>"; };
+		SK107 /* Sketchly.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sketchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		SK110 /* SketchlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchlyApp.swift; sourceTree = "<group>"; };
+		SK111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+
+		SK120 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+
+		SK130 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		SK131 /* PremiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumManager.swift; sourceTree = "<group>"; };
+		SK132 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		SK133 /* ATTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTService.swift; sourceTree = "<group>"; };
+		SK134 /* AttributionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionManager.swift; sourceTree = "<group>"; };
+		SK135 /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
+		SK136 /* AIFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFeedbackService.swift; sourceTree = "<group>"; };
+		SK137 /* LessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonService.swift; sourceTree = "<group>"; };
+
+		SK140 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		SK141 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		SK142 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
+		SK143 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		SK144 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		SK145 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+
+		SK150 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		SK151 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		SK152 /* PremiumBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumBadge.swift; sourceTree = "<group>"; };
+		SK153 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+
+		SK160 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		SK161 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		SK162 /* LessonBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBrowserView.swift; sourceTree = "<group>"; };
+		SK163 /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
+		SK164 /* LessonCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCategoryView.swift; sourceTree = "<group>"; };
+		SK165 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		SK166 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
+		SK167 /* AIFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFeedbackView.swift; sourceTree = "<group>"; };
+		SK168 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		SK169 /* GalleryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPostView.swift; sourceTree = "<group>"; };
+		SK170 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		SK171 /* CurriculumTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumTrackView.swift; sourceTree = "<group>"; };
+		SK172 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		SK173 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		SKFBP1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		SKROOT /* / */ = {
+			isa = PBXGroup;
+			children = (
+				SKSRCGRP /* Sketchly */,
+				SKPRODGRP /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		SKPRODGRP /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				SK107 /* Sketchly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		SKSRCGRP /* Sketchly */ = {
+			isa = PBXGroup;
+			children = (
+				SK110 /* SketchlyApp.swift */,
+				SK111 /* ContentView.swift */,
+				SK105 /* Info.plist */,
+				SK106 /* Sketchly.entitlements */,
+				SK103 /* Configuration.storekit */,
+				SK104 /* GoogleService-Info.plist */,
+				SK101 /* Assets.xcassets */,
+				SK102 /* LaunchScreen.storyboard */,
+				SKMODELS /* Models */,
+				SKSERVICES /* Services */,
+				SKVMS /* ViewModels */,
+				SKVIEWS /* Views */,
+			);
+			path = Sketchly;
+			sourceTree = "<group>";
+		};
+		SKMODELS /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				SK120 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		SKSERVICES /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				SK130 /* StoreKitManager.swift */,
+				SK131 /* PremiumManager.swift */,
+				SK132 /* AnalyticsService.swift */,
+				SK133 /* ATTService.swift */,
+				SK134 /* AttributionManager.swift */,
+				SK135 /* ReviewManager.swift */,
+				SK136 /* AIFeedbackService.swift */,
+				SK137 /* LessonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		SKVMS /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				SK140 /* OnboardingViewModel.swift */,
+				SK141 /* DiscoverViewModel.swift */,
+				SK142 /* LessonViewModel.swift */,
+				SK143 /* PracticeViewModel.swift */,
+				SK144 /* GalleryViewModel.swift */,
+				SK145 /* ProgressViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		SKVIEWS /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				SKCOMPONENTS /* Components */,
+				SKONBOARDING /* Onboarding */,
+				SKDISCOVER /* Discover */,
+				SKLESSONS /* Lessons */,
+				SKPRACTICE /* Practice */,
+				SKGALLERY /* Gallery */,
+				SKPROGRESS /* Progress */,
+				SK172 /* PaywallView.swift */,
+				SKSETTINGS /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		SKCOMPONENTS /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				SK150 /* HapticManager.swift */,
+				SK151 /* EmptyStateView.swift */,
+				SK152 /* PremiumBadge.swift */,
+				SK153 /* LessonCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		SKONBOARDING /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				SK160 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		SKDISCOVER /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				SK161 /* DiscoverView.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		SKLESSONS /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				SK162 /* LessonBrowserView.swift */,
+				SK163 /* LessonDetailView.swift */,
+				SK164 /* LessonCategoryView.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		SKPRACTICE /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				SK165 /* PracticeView.swift */,
+				SK166 /* DrawingCanvasView.swift */,
+				SK167 /* AIFeedbackView.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		SKGALLERY /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				SK168 /* GalleryView.swift */,
+				SK169 /* GalleryPostView.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		SKPROGRESS /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				SK170 /* ProgressView.swift */,
+				SK171 /* CurriculumTrackView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		SKSETTINGS /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				SK173 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		SKTARGET /* Sketchly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = SKBUILDCFGLIST;
+			buildPhases = (
+				SKSOURCES /* Sources */,
+				SKFBP1 /* Frameworks */,
+				SKRESOURCES /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sketchly;
+			packageProductDependencies = (
+			);
+			productName = Sketchly;
+			productReference = SK107 /* Sketchly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		SKPROJECT /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					SKTARGET = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = SKPROJCFGLIST;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = SKROOT;
+			packageReferences = (
+			);
+			productRefGroup = SKPRODGRP;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				SKTARGET /* Sketchly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		SKRESOURCES /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				SK001 /* Assets.xcassets in Resources */,
+				SK002 /* LaunchScreen.storyboard in Resources */,
+				SK003 /* Configuration.storekit in Resources */,
+				SK004 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SKSOURCES /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				SK010 /* SketchlyApp.swift in Sources */,
+				SK011 /* ContentView.swift in Sources */,
+				SK020 /* Models.swift in Sources */,
+				SK030 /* StoreKitManager.swift in Sources */,
+				SK031 /* PremiumManager.swift in Sources */,
+				SK032 /* AnalyticsService.swift in Sources */,
+				SK033 /* ATTService.swift in Sources */,
+				SK034 /* AttributionManager.swift in Sources */,
+				SK035 /* ReviewManager.swift in Sources */,
+				SK036 /* AIFeedbackService.swift in Sources */,
+				SK037 /* LessonService.swift in Sources */,
+				SK040 /* OnboardingViewModel.swift in Sources */,
+				SK041 /* DiscoverViewModel.swift in Sources */,
+				SK042 /* LessonViewModel.swift in Sources */,
+				SK043 /* PracticeViewModel.swift in Sources */,
+				SK044 /* GalleryViewModel.swift in Sources */,
+				SK045 /* ProgressViewModel.swift in Sources */,
+				SK050 /* HapticManager.swift in Sources */,
+				SK051 /* EmptyStateView.swift in Sources */,
+				SK052 /* PremiumBadge.swift in Sources */,
+				SK053 /* LessonCardView.swift in Sources */,
+				SK060 /* OnboardingView.swift in Sources */,
+				SK061 /* DiscoverView.swift in Sources */,
+				SK062 /* LessonBrowserView.swift in Sources */,
+				SK063 /* LessonDetailView.swift in Sources */,
+				SK064 /* LessonCategoryView.swift in Sources */,
+				SK065 /* PracticeView.swift in Sources */,
+				SK066 /* DrawingCanvasView.swift in Sources */,
+				SK067 /* AIFeedbackView.swift in Sources */,
+				SK068 /* GalleryView.swift in Sources */,
+				SK069 /* GalleryPostView.swift in Sources */,
+				SK070 /* ProgressView.swift in Sources */,
+				SK071 /* CurriculumTrackView.swift in Sources */,
+				SK072 /* PaywallView.swift in Sources */,
+				SK073 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		SKDEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		SKRELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		SKTDEBUG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sketchly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.sketchlydrawwithaifeedback;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
+				STOREKIT_CONFIGURATION = Sketchly/Configuration.storekit;
+			};
+			name = Debug;
+		};
+		SKTRELEASE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sketchly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.sketchlydrawwithaifeedback;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		SKPROJCFGLIST /* Build configuration list for PBXProject "Sketchly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				SKDEBUG /* Debug */,
+				SKRELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		SKBUILDCFGLIST /* Build configuration list for PBXNativeTarget "Sketchly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				SKTDEBUG /* Debug */,
+				SKTRELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = SKPROJECT /* Project object */;
+}

@@ -1,0 +1,33 @@
+{
+  "originHash" : "abc123def456",
+  "pins" : [
+    {
+      "identity" : "purchases-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevenueCat/purchases-ios.git",
+      "state" : {
+        "revision" : "b4b3d58a47efee9fbc7e28d0d9fee6b4c9fe95d3",
+        "version" : "4.43.2"
+      }
+    },
+    {
+      "identity" : "firebase-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/firebase-ios-sdk.git",
+      "state" : {
+        "revision" : "abcdef1234567890abcdef1234567890abcdef12",
+        "version" : "10.25.0"
+      }
+    },
+    {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk.git",
+      "state" : {
+        "revision" : "1234567890abcdef1234567890abcdef12345678",
+        "version" : "17.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
