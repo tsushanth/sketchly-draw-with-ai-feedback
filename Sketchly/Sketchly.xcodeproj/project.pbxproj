@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,15 +11,9 @@
 		SK002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = SK102 /* LaunchScreen.storyboard */; };
 		SK003 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = SK103 /* Configuration.storekit */; };
 		SK004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = SK104 /* GoogleService-Info.plist */; };
-
-		/* Sources */
 		SK010 /* SketchlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK110 /* SketchlyApp.swift */; };
 		SK011 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK111 /* ContentView.swift */; };
-
-		/* Models */
 		SK020 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK120 /* Models.swift */; };
-
-		/* Services */
 		SK030 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK130 /* StoreKitManager.swift */; };
 		SK031 /* PremiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK131 /* PremiumManager.swift */; };
 		SK032 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK132 /* AnalyticsService.swift */; };
@@ -28,64 +22,49 @@
 		SK035 /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK135 /* ReviewManager.swift */; };
 		SK036 /* AIFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK136 /* AIFeedbackService.swift */; };
 		SK037 /* LessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK137 /* LessonService.swift */; };
-
-		/* ViewModels */
+		SK038 /* LessonContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK138 /* LessonContentService.swift */; };
+		SK039 /* DrawingLessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK139 /* DrawingLessonService.swift */; };
+		SK075 /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK174 /* LessonPlayerView.swift */; };
 		SK040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK140 /* OnboardingViewModel.swift */; };
 		SK041 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK141 /* DiscoverViewModel.swift */; };
 		SK042 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK142 /* LessonViewModel.swift */; };
 		SK043 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK143 /* PracticeViewModel.swift */; };
 		SK044 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK144 /* GalleryViewModel.swift */; };
 		SK045 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK145 /* ProgressViewModel.swift */; };
-
-		/* Views - Components */
 		SK050 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK150 /* HapticManager.swift */; };
 		SK051 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK151 /* EmptyStateView.swift */; };
 		SK052 /* PremiumBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK152 /* PremiumBadge.swift */; };
 		SK053 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK153 /* LessonCardView.swift */; };
-
-		/* Views - Onboarding */
 		SK060 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK160 /* OnboardingView.swift */; };
-
-		/* Views - Discover */
 		SK061 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK161 /* DiscoverView.swift */; };
-
-		/* Views - Lessons */
 		SK062 /* LessonBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK162 /* LessonBrowserView.swift */; };
 		SK063 /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK163 /* LessonDetailView.swift */; };
 		SK064 /* LessonCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK164 /* LessonCategoryView.swift */; };
-
-		/* Views - Practice */
 		SK065 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK165 /* PracticeView.swift */; };
 		SK066 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK166 /* DrawingCanvasView.swift */; };
 		SK067 /* AIFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK167 /* AIFeedbackView.swift */; };
-
-		/* Views - Gallery */
 		SK068 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK168 /* GalleryView.swift */; };
 		SK069 /* GalleryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK169 /* GalleryPostView.swift */; };
-
-		/* Views - Progress */
 		SK070 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK170 /* ProgressView.swift */; };
 		SK071 /* CurriculumTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK171 /* CurriculumTrackView.swift */; };
-
-		/* Views - Paywall & Settings */
 		SK072 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK172 /* PaywallView.swift */; };
 		SK073 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK173 /* SettingsView.swift */; };
+		SK076 /* CustomLessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK175 /* CustomLessonService.swift */; };
+		SK077 /* CustomLessonInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK176 /* CustomLessonInputView.swift */; };
+		SK078 /* CustomLessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK177 /* CustomLessonPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		SK101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		SK102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		SK103 /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
+		SK103 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		SK104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		SK105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		SK106 /* Sketchly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sketchly.entitlements; sourceTree = "<group>"; };
-		SK107 /* Sketchly.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sketchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		SK107 /* Sketchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		SK110 /* SketchlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchlyApp.swift; sourceTree = "<group>"; };
 		SK111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-
 		SK120 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-
 		SK130 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		SK131 /* PremiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumManager.swift; sourceTree = "<group>"; };
 		SK132 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
@@ -94,19 +73,19 @@
 		SK135 /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		SK136 /* AIFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFeedbackService.swift; sourceTree = "<group>"; };
 		SK137 /* LessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonService.swift; sourceTree = "<group>"; };
-
+		SK138 /* LessonContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentService.swift; sourceTree = "<group>"; };
+		SK139 /* DrawingLessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLessonService.swift; sourceTree = "<group>"; };
+		SK174 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
 		SK140 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		SK141 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		SK142 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
 		SK143 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		SK144 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		SK145 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
-
 		SK150 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		SK151 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		SK152 /* PremiumBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumBadge.swift; sourceTree = "<group>"; };
 		SK153 /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
-
 		SK160 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		SK161 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		SK162 /* LessonBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBrowserView.swift; sourceTree = "<group>"; };
@@ -121,6 +100,9 @@
 		SK171 /* CurriculumTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumTrackView.swift; sourceTree = "<group>"; };
 		SK172 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		SK173 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		SK175 /* CustomLessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonService.swift; sourceTree = "<group>"; };
+		SK176 /* CustomLessonInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonInputView.swift; sourceTree = "<group>"; };
+		SK177 /* CustomLessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,12 +116,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		SKROOT /* / */ = {
+		SKCOMPONENTS /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				SKSRCGRP /* Sketchly */,
-				SKPRODGRP /* Products */,
+				SK150 /* HapticManager.swift */,
+				SK151 /* EmptyStateView.swift */,
+				SK152 /* PremiumBadge.swift */,
+				SK153 /* LessonCardView.swift */,
 			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		SKDISCOVER /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				SK161 /* DiscoverView.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		SKGALLERY /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				SK168 /* GalleryView.swift */,
+				SK169 /* GalleryPostView.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		SKLESSONS /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				SK162 /* LessonBrowserView.swift */,
+				SK163 /* LessonDetailView.swift */,
+				SK164 /* LessonCategoryView.swift */,
+				SK174 /* LessonPlayerView.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		SKMODELS /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				SK120 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		SKONBOARDING /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				SK160 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		SKPRACTICE /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				SK165 /* PracticeView.swift */,
+				SK166 /* DrawingCanvasView.swift */,
+				SK167 /* AIFeedbackView.swift */,
+			);
+			path = Practice;
 			sourceTree = "<group>";
 		};
 		SKPRODGRP /* Products */ = {
@@ -148,6 +187,49 @@
 				SK107 /* Sketchly.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		SKPROGRESS /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				SK170 /* ProgressView.swift */,
+				SK171 /* CurriculumTrackView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		SKROOT = {
+			isa = PBXGroup;
+			children = (
+				SKSRCGRP /* Sketchly */,
+				SKPRODGRP /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		SKSERVICES /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				SK130 /* StoreKitManager.swift */,
+				SK131 /* PremiumManager.swift */,
+				SK132 /* AnalyticsService.swift */,
+				SK133 /* ATTService.swift */,
+				SK134 /* AttributionManager.swift */,
+				SK135 /* ReviewManager.swift */,
+				SK136 /* AIFeedbackService.swift */,
+				SK137 /* LessonService.swift */,
+				SK138 /* LessonContentService.swift */,
+				SK139 /* DrawingLessonService.swift */,
+				SK175 /* CustomLessonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		SKSETTINGS /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				SK173 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		SKSRCGRP /* Sketchly */ = {
@@ -169,27 +251,30 @@
 			path = Sketchly;
 			sourceTree = "<group>";
 		};
-		SKMODELS /* Models */ = {
+		SKCUSTOM /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				SK120 /* Models.swift */,
+				SK176 /* CustomLessonInputView.swift */,
+				SK177 /* CustomLessonPlayerView.swift */,
 			);
-			path = Models;
+			path = Custom;
 			sourceTree = "<group>";
 		};
-		SKSERVICES /* Services */ = {
+		SKVIEWS /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				SK130 /* StoreKitManager.swift */,
-				SK131 /* PremiumManager.swift */,
-				SK132 /* AnalyticsService.swift */,
-				SK133 /* ATTService.swift */,
-				SK134 /* AttributionManager.swift */,
-				SK135 /* ReviewManager.swift */,
-				SK136 /* AIFeedbackService.swift */,
-				SK137 /* LessonService.swift */,
+				SKCOMPONENTS /* Components */,
+				SKONBOARDING /* Onboarding */,
+				SKDISCOVER /* Discover */,
+				SKLESSONS /* Lessons */,
+				SKCUSTOM /* Custom */,
+				SKPRACTICE /* Practice */,
+				SKGALLERY /* Gallery */,
+				SKPROGRESS /* Progress */,
+				SK172 /* PaywallView.swift */,
+				SKSETTINGS /* Settings */,
 			);
-			path = Services;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		SKVMS /* ViewModels */ = {
@@ -205,101 +290,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		SKVIEWS /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				SKCOMPONENTS /* Components */,
-				SKONBOARDING /* Onboarding */,
-				SKDISCOVER /* Discover */,
-				SKLESSONS /* Lessons */,
-				SKPRACTICE /* Practice */,
-				SKGALLERY /* Gallery */,
-				SKPROGRESS /* Progress */,
-				SK172 /* PaywallView.swift */,
-				SKSETTINGS /* Settings */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		SKCOMPONENTS /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				SK150 /* HapticManager.swift */,
-				SK151 /* EmptyStateView.swift */,
-				SK152 /* PremiumBadge.swift */,
-				SK153 /* LessonCardView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		SKONBOARDING /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				SK160 /* OnboardingView.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		SKDISCOVER /* Discover */ = {
-			isa = PBXGroup;
-			children = (
-				SK161 /* DiscoverView.swift */,
-			);
-			path = Discover;
-			sourceTree = "<group>";
-		};
-		SKLESSONS /* Lessons */ = {
-			isa = PBXGroup;
-			children = (
-				SK162 /* LessonBrowserView.swift */,
-				SK163 /* LessonDetailView.swift */,
-				SK164 /* LessonCategoryView.swift */,
-			);
-			path = Lessons;
-			sourceTree = "<group>";
-		};
-		SKPRACTICE /* Practice */ = {
-			isa = PBXGroup;
-			children = (
-				SK165 /* PracticeView.swift */,
-				SK166 /* DrawingCanvasView.swift */,
-				SK167 /* AIFeedbackView.swift */,
-			);
-			path = Practice;
-			sourceTree = "<group>";
-		};
-		SKGALLERY /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-				SK168 /* GalleryView.swift */,
-				SK169 /* GalleryPostView.swift */,
-			);
-			path = Gallery;
-			sourceTree = "<group>";
-		};
-		SKPROGRESS /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				SK170 /* ProgressView.swift */,
-				SK171 /* CurriculumTrackView.swift */,
-			);
-			path = Progress;
-			sourceTree = "<group>";
-		};
-		SKSETTINGS /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				SK173 /* SettingsView.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		SKTARGET /* Sketchly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = SKBUILDCFGLIST;
+			buildConfigurationList = SKBUILDCFGLIST /* Build configuration list for PBXNativeTarget "Sketchly" */;
 			buildPhases = (
 				SKSOURCES /* Sources */,
 				SKFBP1 /* Frameworks */,
@@ -331,7 +327,7 @@
 					};
 				};
 			};
-			buildConfigurationList = SKPROJCFGLIST;
+			buildConfigurationList = SKPROJCFGLIST /* Build configuration list for PBXProject "Sketchly" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -342,7 +338,7 @@
 			mainGroup = SKROOT;
 			packageReferences = (
 			);
-			productRefGroup = SKPRODGRP;
+			productRefGroup = SKPRODGRP /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -381,6 +377,9 @@
 				SK035 /* ReviewManager.swift in Sources */,
 				SK036 /* AIFeedbackService.swift in Sources */,
 				SK037 /* LessonService.swift in Sources */,
+				SK038 /* LessonContentService.swift in Sources */,
+				SK039 /* DrawingLessonService.swift in Sources */,
+				SK075 /* LessonPlayerView.swift in Sources */,
 				SK040 /* OnboardingViewModel.swift in Sources */,
 				SK041 /* DiscoverViewModel.swift in Sources */,
 				SK042 /* LessonViewModel.swift in Sources */,
@@ -405,6 +404,9 @@
 				SK071 /* CurriculumTrackView.swift in Sources */,
 				SK072 /* PaywallView.swift in Sources */,
 				SK073 /* SettingsView.swift in Sources */,
+				SK076 /* CustomLessonService.swift in Sources */,
+				SK077 /* CustomLessonInputView.swift in Sources */,
+				SK078 /* CustomLessonPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,9 +535,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7RS696YC75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Sketchly/Info.plist;
@@ -545,15 +549,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.sketchlydrawwithaifeedback;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreativekoala.sketchly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = iphoneos;
+				STOREKIT_CONFIGURATION = Sketchly/Configuration.storekit;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
-				STOREKIT_CONFIGURATION = Sketchly/Configuration.storekit;
 			};
 			name = Debug;
 		};
@@ -562,9 +565,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7RS696YC75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Sketchly/Info.plist;
@@ -574,29 +579,19 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.sketchlydrawwithaifeedback;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreativekoala.sketchly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				CODE_SIGN_ENTITLEMENTS = Sketchly/Sketchly.entitlements;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		SKPROJCFGLIST /* Build configuration list for PBXProject "Sketchly" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				SKDEBUG /* Debug */,
-				SKRELEASE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		SKBUILDCFGLIST /* Build configuration list for PBXNativeTarget "Sketchly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -606,8 +601,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		SKPROJCFGLIST /* Build configuration list for PBXProject "Sketchly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				SKDEBUG /* Debug */,
+				SKRELEASE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = SKPROJECT /* Project object */;
 }

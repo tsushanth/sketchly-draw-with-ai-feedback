@@ -13,6 +13,7 @@ struct DiscoverView: View {
     @State private var showPaywall = false
     @State private var selectedLesson: LessonModel?
     @State private var showLessonDetail = false
+    @State private var showCustomLesson = false
 
     var body: some View {
         NavigationStack {
@@ -20,6 +21,9 @@ struct DiscoverView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     // Search bar
                     searchBar
+
+                    // Custom Lesson CTA
+                    customLessonBanner
 
                     // Categories
                     categoryScrollView
@@ -65,6 +69,10 @@ struct DiscoverView: View {
         }
         .sheet(item: $selectedLesson) { lesson in
             LessonDetailView(lesson: lesson)
+                .environment(premiumManager)
+        }
+        .sheet(isPresented: $showCustomLesson) {
+            CustomLessonInputView()
                 .environment(premiumManager)
         }
         .onAppear {
@@ -198,6 +206,63 @@ struct DiscoverView: View {
                 }
             }
         }
+    }
+
+    // MARK: - Custom Lesson Banner
+    private var customLessonBanner: some View {
+        Button {
+            showCustomLesson = true
+            HapticManager.impact(style: .medium)
+        } label: {
+            HStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .fill(
+                            LinearGradient(colors: [.orange, .pink], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
+                        .frame(width: 48, height: 48)
+                    Image(systemName: "wand.and.stars")
+                        .font(.title3)
+                        .foregroundColor(.white)
+                }
+
+                VStack(alignment: .leading, spacing: 3) {
+                    HStack(spacing: 6) {
+                        Text("Custom Lesson")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                        if !premiumManager.isPremium {
+                            PremiumBadge(style: .compact)
+                        }
+                    }
+                    Text("Draw anything — AI creates a step-by-step lesson for you")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            .padding(14)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color(.secondarySystemBackground))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(
+                                LinearGradient(colors: [.orange.opacity(0.3), .pink.opacity(0.3)], startPoint: .leading, endPoint: .trailing),
+                                lineWidth: 1
+                            )
+                    )
+            )
+        }
+        .buttonStyle(.plain)
+        .padding(.horizontal)
     }
 
     private func handleLessonTap(_ lesson: LessonModel) {

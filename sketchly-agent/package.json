@@ -1,0 +1,15 @@
+{
+  "name": "sketchly-agent",
+  "version": "1.0.0",
+  "description": "Sketchly custom drawing lesson agent - image search, decomposition, step evaluation",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
