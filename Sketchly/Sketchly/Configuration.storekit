@@ -7,8 +7,8 @@
 
   ],
   "settings" : {
-    "_applicationInternalID" : "1234567890",
-    "_developerTeamID" : "XXXXXXXXXX",
+    "_applicationInternalID" : "6760505411",
+    "_developerTeamID" : "7RS696YC75",
     "_failTransactionsEnabled" : false,
     "_locale" : "en_US",
     "_storefront" : "USA",
@@ -92,7 +92,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.weekly",
+          "productID" : "com.kreativekoala.sketchly.subscription.weekly",
           "recurringSubscriptionPeriod" : "P1W",
           "referenceName" : "Weekly Subscription",
           "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
@@ -125,7 +125,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.monthly",
+          "productID" : "com.kreativekoala.sketchly.subscription.monthly",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Monthly Subscription",
           "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
@@ -158,7 +158,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.yearly",
+          "productID" : "com.kreativekoala.sketchly.subscription.yearly",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Yearly Subscription",
           "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",
@@ -186,7 +186,7 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "com.appfactory.sketchlydrawwithaifeedback.subscription.lifetime",
+          "productID" : "com.kreativekoala.sketchly.subscription.lifetime",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Lifetime Access",
           "subscriptionGroupID" : "C9G5H7E3-6F14-5B0C-9D8E-2F3G4H5I6J7K",

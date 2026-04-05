@@ -5,6 +5,7 @@
 
 import SwiftUI
 import StoreKit
+import PaywallKit
 
 struct SettingsView: View {
     @Environment(PremiumManager.self) private var premiumManager
@@ -123,11 +124,11 @@ struct SettingsView: View {
 
                 // Support
                 Section(header: Text("Support")) {
-                    Link(destination: URL(string: "mailto:support@appfactory.dev?subject=Sketchly Support")!) {
+                    Link(destination: URL(string: "mailto:support@kreativekoala.llc?subject=Sketchly Support")!) {
                         Label("Contact Support", systemImage: "envelope")
                     }
 
-                    Link(destination: URL(string: "https://appfactory.dev/sketchly/help")!) {
+                    Link(destination: URL(string: "https://kreativekoala.llc/support")!) {
                         Label("Help Center", systemImage: "questionmark.circle")
                     }
 
@@ -139,14 +140,39 @@ struct SettingsView: View {
                         Label("Rate Sketchly", systemImage: "star.fill")
                     }
 
-                    Link(destination: URL(string: "https://appfactory.dev/privacy")!) {
+                    Link(destination: URL(string: "https://kreativekoala.llc/privacy")!) {
                         Label("Privacy Policy", systemImage: "hand.raised.fill")
                     }
 
-                    Link(destination: URL(string: "https://appfactory.dev/terms")!) {
+                    Link(destination: URL(string: "https://kreativekoala.llc/terms")!) {
                         Label("Terms of Use", systemImage: "doc.text.fill")
                     }
                 }
+
+                // Paywall Testing (debug only)
+                #if DEBUG
+                Section(header: Text("Paywall Testing")) {
+                    Button("Test Paywall") {
+                        showPaywall = true
+                    }
+
+                    ForEach(["anchorDecoy", "valueStack", "socialProof", "softCommitment", "nowOrNever", "trialGate", "freeTrialFunnel"], id: \.self) { template in
+                        Button("Force: \(template)") {
+                            if let t = PrimaryTemplate(rawValue: template) {
+                                ExperimentManager.shared.forceTemplate(primary: t)
+                            }
+                            showPaywall = true
+                        }
+                        .font(.subheadline)
+                    }
+
+                    Button("Reset to Random") {
+                        ExperimentManager.shared.forceTemplate(primary: nil)
+                    }
+                    .foregroundColor(.red)
+                    .font(.subheadline)
+                }
+                #endif
 
                 // App Info
                 Section(header: Text("About")) {
@@ -160,7 +186,7 @@ struct SettingsView: View {
                     HStack {
                         Text("Bundle ID")
                         Spacer()
-                        Text("com.appfactory.sketchlydrawwithaifeedback")
+                        Text("com.kreativekoala.sketchly")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }

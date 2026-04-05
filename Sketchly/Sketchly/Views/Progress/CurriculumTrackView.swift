@@ -97,44 +97,21 @@ struct CurriculumTrackView: View {
             }
 
             if trackLessons.isEmpty {
-                VStack(spacing: 12) {
-                    ForEach(0..<min(5, selectedTrack.lessonCount), id: \.self) { index in
-                        HStack(spacing: 12) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color(.systemGray5))
-                                    .frame(width: 36, height: 36)
-                                Text("\(index + 1)")
-                                    .font(.subheadline)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.secondary)
-                            }
-
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(placeholderLessonTitle(for: selectedTrack, index: index))
-                                    .font(.subheadline)
-                                Text("~30 min")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-
-                            Spacer()
-
-                            Image(systemName: "chevron.right")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                        .padding(12)
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                    }
-
-                    Text("+ \(selectedTrack.lessonCount - 5) more lessons")
-                        .font(.caption)
+                VStack(spacing: 16) {
+                    Image(systemName: "clock.badge.checkmark")
+                        .font(.system(size: 40))
                         .foregroundColor(.secondary)
-                        .padding()
+                    Text("More lessons coming soon")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                    Text("We're building out this track. Check back for new lessons.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 32)
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 40)
             } else {
                 LazyVStack(spacing: 12) {
                     ForEach(Array(trackLessons.enumerated()), id: \.element.id) { index, lesson in
@@ -227,17 +204,7 @@ struct CurriculumTrackView: View {
         }
     }
 
-    private func placeholderLessonTitle(for track: CurriculumTrack, index: Int) -> String {
-        let mangaTitles = ["Manga Eyes & Expressions", "Manga Hair Styles", "Character Faces", "Body Proportions", "Action Lines"]
-        let portraitTitles = ["Portrait Proportions", "Eyes in Detail", "Nose & Mouth", "Hair Drawing", "Full Portrait"]
-        let landscapeTitles = ["Horizon Lines", "Perspective Drawing", "Trees & Foliage", "Water Reflections", "Sky & Clouds"]
 
-        switch track {
-        case .mangaMaster: return index < mangaTitles.count ? mangaTitles[index] : "Advanced Manga \(index + 1)"
-        case .portraitPro: return index < portraitTitles.count ? portraitTitles[index] : "Portrait Study \(index + 1)"
-        case .landscapeArtist: return index < landscapeTitles.count ? landscapeTitles[index] : "Landscape Study \(index + 1)"
-        }
-    }
 }
 
 // MARK: - Certificate View

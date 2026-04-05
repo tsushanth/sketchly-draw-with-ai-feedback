@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Sketchly
 //
-//  Root TabView with Discover, Learn, Practice, Gallery, Progress, Settings tabs
+//  Root TabView with Discover, Learn, Practice, Settings tabs
 //
 
 import SwiftUI
@@ -16,11 +16,17 @@ struct ContentView: View {
     @State private var showOnboarding: Bool = false
     @State private var selectedTab: Tab = .discover
 
+    init() {
+        // FASTLANE_SNAPSHOT: skip onboarding for automated screenshots
+        if ProcessInfo.processInfo.arguments.contains("-FASTLANE_SNAPSHOT") {
+            UserDefaults.standard.set(true, forKey: "com.appfactory.sketchly.hasCompletedOnboarding")
+        }
+    }
+
     enum Tab: String, CaseIterable {
         case discover = "Discover"
         case learn = "Learn"
         case practice = "Practice"
-        case gallery = "Gallery"
         case settings = "Settings"
 
         var icon: String {
@@ -28,7 +34,6 @@ struct ContentView: View {
             case .discover: return "house.fill"
             case .learn: return "books.vertical.fill"
             case .practice: return "pencil.tip.crop.circle.fill"
-            case .gallery: return "photo.stack.fill"
             case .settings: return "gearshape.fill"
             }
         }
@@ -73,12 +78,6 @@ struct ContentView: View {
                     Label("Practice", systemImage: Tab.practice.icon)
                 }
                 .tag(Tab.practice)
-
-            GalleryView()
-                .tabItem {
-                    Label("Gallery", systemImage: Tab.gallery.icon)
-                }
-                .tag(Tab.gallery)
 
             SettingsView()
                 .tabItem {

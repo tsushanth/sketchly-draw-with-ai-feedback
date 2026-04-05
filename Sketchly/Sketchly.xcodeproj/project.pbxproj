@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FF7924C10AF9A700611BD41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725BB360349F03E04891E0A7 /* Foundation.framework */; };
+		A4F73CDB7908C8E3F3ED490C /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300960552C1D88A23DBBAF0 /* SnapshotHelper.swift */; };
+		DCBF255152B98DF61B19EAE8 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EAB82A13B153F39BD1C355 /* ScreenshotTests.swift */; };
 		SK001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = SK101 /* Assets.xcassets */; };
 		SK002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = SK102 /* LaunchScreen.storyboard */; };
 		SK003 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = SK103 /* Configuration.storekit */; };
@@ -24,7 +27,6 @@
 		SK037 /* LessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK137 /* LessonService.swift */; };
 		SK038 /* LessonContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK138 /* LessonContentService.swift */; };
 		SK039 /* DrawingLessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK139 /* DrawingLessonService.swift */; };
-		SK075 /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK174 /* LessonPlayerView.swift */; };
 		SK040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK140 /* OnboardingViewModel.swift */; };
 		SK041 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK141 /* DiscoverViewModel.swift */; };
 		SK042 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK142 /* LessonViewModel.swift */; };
@@ -49,12 +51,28 @@
 		SK071 /* CurriculumTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK171 /* CurriculumTrackView.swift */; };
 		SK072 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK172 /* PaywallView.swift */; };
 		SK073 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK173 /* SettingsView.swift */; };
+		SK075 /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK174 /* LessonPlayerView.swift */; };
 		SK076 /* CustomLessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK175 /* CustomLessonService.swift */; };
 		SK077 /* CustomLessonInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK176 /* CustomLessonInputView.swift */; };
 		SK078 /* CustomLessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK177 /* CustomLessonPlayerView.swift */; };
+		SK079 /* DrawingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = SK178 /* DrawingHelpers.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BED72BD764EA91E357FD028F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = SKPROJECT /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = SKTARGET;
+			remoteInfo = Sketchly;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		725BB360349F03E04891E0A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9300960552C1D88A23DBBAF0 /* SnapshotHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		B1EAB82A13B153F39BD1C355 /* ScreenshotTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
+		FACEFDE1F2D807D6F8F99E36 /* SketchlyUITests */ = {isa = PBXFileReference; includeInIndex = 0; path = SketchlyUITests; sourceTree = BUILT_PRODUCTS_DIR; };
 		SK101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		SK102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		SK103 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -75,7 +93,6 @@
 		SK137 /* LessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonService.swift; sourceTree = "<group>"; };
 		SK138 /* LessonContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentService.swift; sourceTree = "<group>"; };
 		SK139 /* DrawingLessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLessonService.swift; sourceTree = "<group>"; };
-		SK174 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
 		SK140 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		SK141 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		SK142 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
@@ -100,12 +117,22 @@
 		SK171 /* CurriculumTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumTrackView.swift; sourceTree = "<group>"; };
 		SK172 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		SK173 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		SK174 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
 		SK175 /* CustomLessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonService.swift; sourceTree = "<group>"; };
 		SK176 /* CustomLessonInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonInputView.swift; sourceTree = "<group>"; };
 		SK177 /* CustomLessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLessonPlayerView.swift; sourceTree = "<group>"; };
+		SK178 /* DrawingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		66B5DD2BB2E58DBA26E67C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF7924C10AF9A700611BD41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		SKFBP1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +143,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4292D23EA77D2BC22B2A61C5 /* SketchlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9300960552C1D88A23DBBAF0 /* SnapshotHelper.swift */,
+				B1EAB82A13B153F39BD1C355 /* ScreenshotTests.swift */,
+			);
+			name = SketchlyUITests;
+			path = SketchlyUITests;
+			sourceTree = "<group>";
+		};
+		823F807C2B96FF0612AC92CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B18D40712AB0A5D9E6A10D29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B18D40712AB0A5D9E6A10D29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				725BB360349F03E04891E0A7 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		SKCOMPONENTS /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +176,18 @@
 				SK151 /* EmptyStateView.swift */,
 				SK152 /* PremiumBadge.swift */,
 				SK153 /* LessonCardView.swift */,
+				SK178 /* DrawingHelpers.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		SKCUSTOM /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				SK176 /* CustomLessonInputView.swift */,
+				SK177 /* CustomLessonPlayerView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		SKDISCOVER /* Discover */ = {
@@ -185,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				SK107 /* Sketchly.app */,
+				FACEFDE1F2D807D6F8F99E36 /* SketchlyUITests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +267,8 @@
 			children = (
 				SKSRCGRP /* Sketchly */,
 				SKPRODGRP /* Products */,
+				823F807C2B96FF0612AC92CE /* Frameworks */,
+				4292D23EA77D2BC22B2A61C5 /* SketchlyUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,15 +317,6 @@
 			path = Sketchly;
 			sourceTree = "<group>";
 		};
-		SKCUSTOM /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				SK176 /* CustomLessonInputView.swift */,
-				SK177 /* CustomLessonPlayerView.swift */,
-			);
-			path = Custom;
-			sourceTree = "<group>";
-		};
 		SKVIEWS /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +350,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		86BFEA377046EBEC44E25232 /* SketchlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9459E942441743C6FE9D6C /* Build configuration list for PBXNativeTarget "SketchlyUITests" */;
+			buildPhases = (
+				337114B09F0CCB330D231389 /* Sources */,
+				66B5DD2BB2E58DBA26E67C72 /* Frameworks */,
+				D606B9769CB8E127287C648D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05817764EFC5F3DA5B074122 /* PBXTargetDependency */,
+			);
+			name = SketchlyUITests;
+			productName = SketchlyUITests;
+			productReference = FACEFDE1F2D807D6F8F99E36 /* SketchlyUITests */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		SKTARGET /* Sketchly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = SKBUILDCFGLIST /* Build configuration list for PBXNativeTarget "Sketchly" */;
@@ -307,6 +382,7 @@
 			);
 			name = Sketchly;
 			packageProductDependencies = (
+				SKPKGPROD1 /* PaywallKit */,
 			);
 			productName = Sketchly;
 			productReference = SK107 /* Sketchly.app */;
@@ -337,17 +413,26 @@
 			);
 			mainGroup = SKROOT;
 			packageReferences = (
+				SKPKGREF1 /* XCRemoteSwiftPackageReference "PaywallKit" */,
 			);
 			productRefGroup = SKPRODGRP /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				SKTARGET /* Sketchly */,
+				86BFEA377046EBEC44E25232 /* SketchlyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D606B9769CB8E127287C648D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		SKRESOURCES /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +447,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		337114B09F0CCB330D231389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F73CDB7908C8E3F3ED490C /* SnapshotHelper.swift in Sources */,
+				DCBF255152B98DF61B19EAE8 /* ScreenshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		SKSOURCES /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,12 +501,53 @@
 				SK076 /* CustomLessonService.swift in Sources */,
 				SK077 /* CustomLessonInputView.swift in Sources */,
 				SK078 /* CustomLessonPlayerView.swift in Sources */,
+				SK079 /* DrawingHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		05817764EFC5F3DA5B074122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sketchly;
+			target = SKTARGET /* Sketchly */;
+			targetProxy = BED72BD764EA91E357FD028F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		09DCF36E91DC6B4451B0C6BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RS696YC75;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreativekoala.sketchly.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Sketchly;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62A8F0D606D38D54B61345B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RS696YC75;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreativekoala.sketchly.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Sketchly;
+			};
+			name = Debug;
+		};
 		SKDEBUG /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,6 +727,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD9459E942441743C6FE9D6C /* Build configuration list for PBXNativeTarget "SketchlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09DCF36E91DC6B4451B0C6BF /* Release */,
+				62A8F0D606D38D54B61345B3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		SKBUILDCFGLIST /* Build configuration list for PBXNativeTarget "Sketchly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -611,6 +755,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		SKPKGREF1 /* XCRemoteSwiftPackageReference "PaywallKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsushanth/PaywallKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		SKPKGPROD1 /* PaywallKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = SKPKGREF1 /* XCRemoteSwiftPackageReference "PaywallKit" */;
+			productName = PaywallKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = SKPROJECT /* Project object */;
 }

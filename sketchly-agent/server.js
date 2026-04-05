@@ -31,8 +31,11 @@ const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 // ============================================
 
 function auth(req, res, next) {
+    if (!WORKER_SECRET) {
+        return res.status(500).json({ error: 'Server not configured: missing WORKER_SECRET' });
+    }
     const token = req.headers['x-worker-secret'] || req.headers['authorization']?.replace('Bearer ', '');
-    if (!WORKER_SECRET || token === WORKER_SECRET) {
+    if (token === WORKER_SECRET) {
         return next();
     }
     res.status(401).json({ error: 'Unauthorized' });
@@ -134,7 +137,7 @@ app.post('/custom/lesson', auth, async (req, res) => {
             difficulty,
             referenceImage, // may be null if no image found
             plan,
-            stepResults: [],
+            stepResults: {},
             currentStep: 0,
         });
 
@@ -178,7 +181,7 @@ app.post('/custom/evaluate', auth, async (req, res) => {
         const step = plan.steps[stepIndex];
 
         // Build context from previous step results for continuity
-        const priorContext = session.stepResults
+        const priorContext = Object.values(session.stepResults)
             .filter(r => r.stepIndex < stepIndex)
             .map(r => `Step ${r.stepIndex + 1} (${plan.steps[r.stepIndex].description}): ${r.passed ? 'passed' : 'needs work'} - ${r.feedback}`)
             .join('\n');
@@ -192,25 +195,24 @@ app.post('/custom/evaluate', auth, async (req, res) => {
         );
 
         // Track attempts per step
-        const existing = session.stepResults.find(r => r.stepIndex === stepIndex);
+        const existing = session.stepResults[stepIndex];
         if (existing) {
             existing.attempts += 1;
             existing.passed = evaluation.passed;
             existing.feedback = evaluation.feedback;
             existing.score = evaluation.score;
         } else {
-            session.stepResults.push({
+            session.stepResults[stepIndex] = {
                 stepIndex,
                 passed: evaluation.passed,
                 feedback: evaluation.feedback,
                 score: evaluation.score,
                 attempts: 1,
-            });
+            };
         }
 
         // Determine next action
         const isLastStep = stepIndex === plan.steps.length - 1;
-        const allStepsPassed = session.stepResults.filter(r => r.passed).length === plan.steps.length;
 
         let nextAction;
         if (evaluation.passed && isLastStep) {
@@ -223,7 +225,7 @@ app.post('/custom/evaluate', auth, async (req, res) => {
         }
 
         // Find weak steps the user might want to revisit
-        const weakSteps = session.stepResults
+        const weakSteps = Object.values(session.stepResults)
             .filter(r => r.passed && r.score && r.score < 7)
             .map(r => ({
                 stepIndex: r.stepIndex,
@@ -246,13 +248,14 @@ app.post('/custom/evaluate', auth, async (req, res) => {
 
         if (nextAction === 'complete') {
             // Generate summary
+            const allResults = Object.values(session.stepResults);
             response.summary = {
                 totalSteps: plan.steps.length,
-                stepsCompleted: session.stepResults.filter(r => r.passed).length,
+                stepsCompleted: allResults.filter(r => r.passed).length,
                 averageScore: Math.round(
-                    session.stepResults.reduce((sum, r) => sum + (r.score || 5), 0) / session.stepResults.length
+                    allResults.reduce((sum, r) => sum + (r.score || 5), 0) / allResults.length
                 ),
-                totalAttempts: session.stepResults.reduce((sum, r) => sum + r.attempts, 0),
+                totalAttempts: allResults.reduce((sum, r) => sum + r.attempts, 0),
                 weakSteps,
             };
         }
@@ -283,7 +286,7 @@ app.post('/custom/revisit', auth, async (req, res) => {
         }
 
         const step = plan.steps[stepIndex];
-        const prevResult = stepResults.find(r => r.stepIndex === stepIndex);
+        const prevResult = stepResults[stepIndex];
 
         session.currentStep = stepIndex;
 
@@ -318,7 +321,7 @@ app.get('/custom/session/:id', auth, (req, res) => {
         totalSteps: session.plan.steps.length,
         currentStep: session.currentStep,
         steps: session.plan.steps.map((step, i) => {
-            const result = session.stepResults.find(r => r.stepIndex === i);
+            const result = session.stepResults[i];
             return {
                 ...step,
                 status: result ? (result.passed ? 'passed' : 'attempted') : 'pending',
