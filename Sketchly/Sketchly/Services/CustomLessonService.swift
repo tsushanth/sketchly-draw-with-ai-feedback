@@ -127,7 +127,7 @@ final class CustomLessonService {
             "difficulty": difficulty,
             "mode": mode
         ]
-        let data = try await post(path: "/custom/lesson", body: body)
+        let data = try await request(method: "POST", path: "/custom/lesson", body: body)
         return try JSONDecoder().decode(CustomLessonResponse.self, from: data)
     }
 
@@ -143,7 +143,7 @@ final class CustomLessonService {
             "stepIndex": stepIndex,
             "imageBase64": imageData.base64EncodedString()
         ]
-        let data = try await post(path: "/custom/evaluate", body: body)
+        let data = try await request(method: "POST", path: "/custom/evaluate", body: body)
         return try JSONDecoder().decode(EvaluationResponse.self, from: data)
     }
 
@@ -154,72 +154,41 @@ final class CustomLessonService {
             "sessionId": sessionId,
             "stepIndex": stepIndex
         ]
-        let data = try await post(path: "/custom/revisit", body: body)
+        let data = try await request(method: "POST", path: "/custom/revisit", body: body)
         return try JSONDecoder().decode(RevisitResponse.self, from: data)
     }
 
     // MARK: - Get session state
 
     func getSession(sessionId: String) async throws -> SessionStateResponse {
-        let data = try await get(path: "/custom/session/\(sessionId)")
+        let data = try await request(method: "GET", path: "/custom/session/\(sessionId)", timeout: 15)
         return try JSONDecoder().decode(SessionStateResponse.self, from: data)
     }
 
     // MARK: - Networking
 
-    private func post(path: String, body: [String: Any]) async throws -> Data {
+    private func request(method: String, path: String, body: [String: Any]? = nil, timeout: TimeInterval = 90) async throws -> Data {
         guard let url = URL(string: baseURL + path) else {
             throw CustomLessonError.invalidURL
         }
-
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = method
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(workerSecret, forHTTPHeaderField: "x-worker-secret")
-        request.timeoutInterval = 90
-        request.httpBody = try JSONSerialization.data(withJSONObject: body)
-
+        request.timeoutInterval = timeout
+        if let body = body {
+            request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        }
         let (data, response) = try await URLSession.shared.data(for: request)
-
         guard let http = response as? HTTPURLResponse else {
             throw CustomLessonError.networkError
         }
-
         if http.statusCode == 404 {
             throw CustomLessonError.sessionExpired
         }
-
         guard (200...299).contains(http.statusCode) else {
             throw CustomLessonError.serverError(http.statusCode)
         }
-
-        return data
-    }
-
-    private func get(path: String) async throws -> Data {
-        guard let url = URL(string: baseURL + path) else {
-            throw CustomLessonError.invalidURL
-        }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue(workerSecret, forHTTPHeaderField: "x-worker-secret")
-        request.timeoutInterval = 15
-
-        let (data, response) = try await URLSession.shared.data(for: request)
-
-        guard let http = response as? HTTPURLResponse else {
-            throw CustomLessonError.networkError
-        }
-
-        if http.statusCode == 404 {
-            throw CustomLessonError.sessionExpired
-        }
-
-        guard (200...299).contains(http.statusCode) else {
-            throw CustomLessonError.serverError(http.statusCode)
-        }
-
         return data
     }
 }

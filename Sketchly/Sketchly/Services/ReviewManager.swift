@@ -14,7 +14,7 @@ final class ReviewManager: ObservableObject {
     private let userDefaults = UserDefaults.standard
     private let minimumLaunchCount = 3
     private let minimumSuccessfulActions = 1
-    private let feedbackEmail = "support@appfactory.dev"
+    private let feedbackEmail = "support@kreativekoala.llc"
 
     private enum Keys {
         static let launchCount = "app_launch_count"

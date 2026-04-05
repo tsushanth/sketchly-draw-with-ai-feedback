@@ -1,31 +1,13 @@
 {
-  "originHash" : "abc123def456",
+  "originHash" : "692b8ddd4848afeec53965d84f97894fa1ac311c63a6367f1f0170b10b9c7e70",
   "pins" : [
     {
-      "identity" : "purchases-ios",
+      "identity" : "paywallkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/RevenueCat/purchases-ios.git",
+      "location" : "https://github.com/tsushanth/PaywallKit.git",
       "state" : {
-        "revision" : "b4b3d58a47efee9fbc7e28d0d9fee6b4c9fe95d3",
-        "version" : "4.43.2"
-      }
-    },
-    {
-      "identity" : "firebase-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/firebase/firebase-ios-sdk.git",
-      "state" : {
-        "revision" : "abcdef1234567890abcdef1234567890abcdef12",
-        "version" : "10.25.0"
-      }
-    },
-    {
-      "identity" : "facebook-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/facebook/facebook-ios-sdk.git",
-      "state" : {
-        "revision" : "1234567890abcdef1234567890abcdef12345678",
-        "version" : "17.0.2"
+        "branch" : "main",
+        "revision" : "746b551c1afa36ea79fbe7380cd8a0cb06811246"
       }
     }
   ],

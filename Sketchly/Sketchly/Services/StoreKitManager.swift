@@ -10,10 +10,10 @@ import StoreKit
 
 // MARK: - Product Identifiers
 enum StoreKitProductID: String, CaseIterable {
-    case weekly = "com.appfactory.sketchlydrawwithaifeedback.subscription.weekly"
-    case monthly = "com.appfactory.sketchlydrawwithaifeedback.subscription.monthly"
-    case yearly = "com.appfactory.sketchlydrawwithaifeedback.subscription.yearly"
-    case lifetime = "com.appfactory.sketchlydrawwithaifeedback.subscription.lifetime"
+    case weekly = "com.kreativekoala.sketchly.subscription.weekly"
+    case monthly = "com.kreativekoala.sketchly.subscription.monthly"
+    case yearly = "com.kreativekoala.sketchly.subscription.yearly"
+    case lifetime = "com.kreativekoala.sketchly.subscription.lifetime"
 
     var displayName: String {
         switch self {

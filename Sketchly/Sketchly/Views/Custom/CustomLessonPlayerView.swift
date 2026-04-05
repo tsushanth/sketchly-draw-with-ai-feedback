@@ -42,6 +42,7 @@ struct CustomLessonPlayerView: View {
 
     // Revisit
     @State private var showRevisitSheet = false
+    @State private var showPaywall = false
 
     private let svgSize: CGFloat = 300
     private let displaySize: CGFloat = 260
@@ -84,8 +85,13 @@ struct CustomLessonPlayerView: View {
                 }
             }
         }
+        .onDisappear { synthesizer.stopSpeaking(at: .immediate) }
         .sheet(isPresented: $showRevisitSheet) {
             revisitSheet
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+                .environment(premiumManager)
         }
         .onAppear {
             sessionId = lessonResponse.sessionId
@@ -379,7 +385,7 @@ struct CustomLessonPlayerView: View {
                     .buttonStyle(PrimaryButtonStyle())
                 } else {
                     Button("Finish!") {
-                        state = .complete
+                        finishLesson()
                     }
                     .buttonStyle(PrimaryButtonStyle())
                 }
@@ -568,7 +574,7 @@ struct CustomLessonPlayerView: View {
         state = .watchingDemo(index)
 
         if index < allSteps.count {
-            speak(allSteps[index].instruction)
+            speakInstruction(allSteps[index].instruction, using: synthesizer)
         }
 
         // Animate path
@@ -597,7 +603,7 @@ struct CustomLessonPlayerView: View {
 
         state = .evaluating(i)
 
-        guard let image = exportCanvas() else {
+        guard let image = exportCanvasAsImage(drawing) else {
             lastPassed = true
             lastFeedback = "Good work! Moving on."
             lastScore = 6
@@ -648,7 +654,19 @@ struct CustomLessonPlayerView: View {
             // Keep the drawing — user builds on previous steps
             startWatchingStep(nextIndex)
         } else {
-            state = .complete
+            finishLesson()
+        }
+    }
+
+    private func finishLesson() {
+        state = .complete
+        premiumManager.recordLessonCompleted()
+
+        if premiumManager.shouldShowPostLessonPaywall() {
+            premiumManager.recordPostLessonPaywallShown()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                showPaywall = true
+            }
         }
     }
 
@@ -687,32 +705,6 @@ struct CustomLessonPlayerView: View {
         }
     }
 
-    private func speak(_ text: String) {
-        synthesizer.stopSpeaking(at: .immediate)
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.rate = 0.48
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        synthesizer.speak(utterance)
-    }
-
-    private func exportCanvas() -> UIImage? {
-        let size = CGSize(width: 390, height: 350)
-        let drawingBounds = CGRect(origin: .zero, size: size)
-        let drawingImage = drawing.image(from: drawingBounds, scale: UIScreen.main.scale)
-
-        let renderer = UIGraphicsImageRenderer(size: size)
-        return renderer.image { ctx in
-            UIColor.white.setFill()
-            ctx.fill(drawingBounds)
-            drawingImage.draw(in: drawingBounds)
-        }
-    }
-
-    private func scoreColor(_ score: Int) -> Color {
-        if score >= 8 { return .green }
-        if score >= 6 { return .orange }
-        return .red
-    }
 }
 
 // MARK: - State Enum

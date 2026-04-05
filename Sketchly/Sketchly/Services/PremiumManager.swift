@@ -237,6 +237,44 @@ final class PremiumManager {
         paywallDismissCount += 1
     }
 
+    // MARK: - Post-Lesson Nudge
+
+    private static let completedLessonCountKey = "com.appfactory.sketchly.completedLessonCount"
+    private static let lastPostLessonPaywallKey = "com.appfactory.sketchly.lastPostLessonPaywall"
+
+    var completedLessonCount: Int {
+        get { userDefaults.integer(forKey: Self.completedLessonCountKey) }
+        set { userDefaults.set(newValue, forKey: Self.completedLessonCountKey) }
+    }
+
+    func recordLessonCompleted() {
+        completedLessonCount += 1
+    }
+
+    /// Show paywall after 2nd completed lesson, then every 3 lessons,
+    /// but not more than once every 48 hours.
+    func shouldShowPostLessonPaywall() -> Bool {
+        if isPremium { return false }
+        if completedLessonCount < 2 { return false }
+
+        // Every 3 lessons after the 2nd (2, 5, 8, 11...)
+        let eligible = completedLessonCount == 2 || (completedLessonCount - 2) % 3 == 0
+
+        if !eligible { return false }
+
+        // 48-hour cooldown
+        if let lastShow = userDefaults.object(forKey: Self.lastPostLessonPaywallKey) as? Date {
+            let hoursSince = Date().timeIntervalSince(lastShow) / 3600
+            if hoursSince < 48 { return false }
+        }
+
+        return true
+    }
+
+    func recordPostLessonPaywallShown() {
+        userDefaults.set(Date(), forKey: Self.lastPostLessonPaywallKey)
+    }
+
     func resetState() {
         storeKitManager.resetState()
     }

@@ -69,9 +69,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             AnalyticsService.shared.track(.appOpen)
         }
 
-        // Request ATT permission
+        // Attribution (no ATT - app does not track users)
         Task { @MainActor in
-            _ = await ATTService.shared.requestIfNeeded()
             await AttributionManager.shared.requestAttributionIfNeeded()
         }
 
