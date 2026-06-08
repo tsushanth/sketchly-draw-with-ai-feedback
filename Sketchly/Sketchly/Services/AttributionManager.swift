@@ -56,9 +56,22 @@ final class AttributionManager {
 
     private func sendAttributionToBackend(token: String) async {
         #if DEBUG
-        print("[Attribution] Token ready to send to backend: \(token.prefix(50))...")
+        print("[Attribution] Posting token to Apple: \(token.prefix(50))...")
         #endif
-        // TODO: Implement actual backend call
+        do {
+            var req = URLRequest(url: URL(string: "https://api-adservices.apple.com/api/v1/")!)
+            req.httpMethod = "POST"
+            req.setValue("text/plain", forHTTPHeaderField: "Content-Type")
+            req.httpBody = token.data(using: .utf8)
+            _ = try await URLSession.shared.data(for: req)
+            #if DEBUG
+            print("[Attribution] Successfully posted token to Apple")
+            #endif
+        } catch {
+            #if DEBUG
+            print("[Attribution] Failed to post token: \(error.localizedDescription)")
+            #endif
+        }
     }
 
     private func handleAttributionError(_ error: Error) {

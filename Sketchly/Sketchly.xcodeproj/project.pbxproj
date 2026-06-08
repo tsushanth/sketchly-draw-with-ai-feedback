@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9FF7924C10AF9A700611BD41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725BB360349F03E04891E0A7 /* Foundation.framework */; };
+		F530D2822C298E871CF1DD6C /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FAB807AFDE6E39CA1B4BBD /* AdServices.framework */; };
 		A4F73CDB7908C8E3F3ED490C /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300960552C1D88A23DBBAF0 /* SnapshotHelper.swift */; };
 		DCBF255152B98DF61B19EAE8 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EAB82A13B153F39BD1C355 /* ScreenshotTests.swift */; };
 		SK001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = SK101 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03FAB807AFDE6E39CA1B4BBD /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		725BB360349F03E04891E0A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9300960552C1D88A23DBBAF0 /* SnapshotHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		B1EAB82A13B153F39BD1C355 /* ScreenshotTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F530D2822C298E871CF1DD6C /* AdServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B18D40712AB0A5D9E6A10D29 /* iOS */,
+				03FAB807AFDE6E39CA1B4BBD /* AdServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
