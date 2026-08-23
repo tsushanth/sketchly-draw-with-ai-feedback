@@ -14,7 +14,7 @@ android {
         applicationId = "com.kreativekoala.sketchly"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -46,9 +46,19 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/Users/sushanthtiruvaipati/Documents/GitHub/AndroidAppKey")
+            storePassword = "KashtePhale!9"
+            keyAlias = "androidappkey"
+            keyPassword = "KashtePhale!9"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
