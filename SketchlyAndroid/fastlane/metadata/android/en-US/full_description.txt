@@ -1,0 +1,22 @@
+Sketchly is a practice canvas for drawing that tells you what's actually working in your sketch — and what to fix next.
+
+Draw on the canvas, tap AI Feedback, and get a score and specific notes on four fundamentals: proportions, shading, line weight, and composition. Every score is calculated by analyzing the actual pixels of your drawing — not a generic tip pulled at random. The feedback changes based on what you drew.
+
+HOW IT WORKS
+1. Sketch on the practice canvas — undo, redo, and clear as you go
+2. Tap AI Feedback when you're ready for a read on your sketch
+3. See your score broken down by proportions, shading, line weight, and composition
+4. Get one clear top tip pointing at whichever area needs the most work
+5. Save drawings to your gallery and track your practice over time
+
+FEATURES
+- On-device AI feedback: proportions, shading, line weight, and composition, each scored and explained
+- Fully offline: the feedback engine runs entirely on your device — no upload, no cloud round trip, no account needed
+- Nothing to download: the AI feedback works the moment you install the app, no separate model download
+- Simple practice canvas with undo, redo, and clear
+- Personal gallery of everything you've sketched
+
+WHY OFFLINE
+Sketchly's feedback isn't a chatbot describing your drawing in vague terms. It measures real signal in your pixels — tonal variation for shading, stroke consistency for line weight, canvas balance for composition, shape ratios for proportions — and turns those measurements into a score and a specific, actionable note. Because it all runs on-device, your sketches never leave your phone.
+
+Whether you're warming up, working through a drawing habit, or just want an honest second opinion on a sketch, Sketchly gives you something more useful than a blank canvas: a reason to try the next one.

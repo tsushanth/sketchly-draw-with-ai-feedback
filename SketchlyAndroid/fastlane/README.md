@@ -1,0 +1,48 @@
+fastlane documentation
+----
+
+# Installation
+
+Make sure you have the latest version of the Xcode command line tools installed:
+
+```sh
+xcode-select --install
+```
+
+For _fastlane_ installation instructions, see [Installing _fastlane_](https://docs.fastlane.tools/#installing-fastlane)
+
+# Available Actions
+
+## Android
+
+### android internal
+
+```sh
+[bundle exec] fastlane android internal
+```
+
+Push the latest release AAB to Internal Testing. Use this for the first-ever release — Play requires closed testing (12+ testers, 14 days) before production is allowed on a new app.
+
+### android deploy
+
+```sh
+[bundle exec] fastlane android deploy
+```
+
+
+
+### android promote_to_open_testing
+
+```sh
+[bundle exec] fastlane android promote_to_open_testing
+```
+
+Push current AAB to Open Testing (beta) track. Pre-req: Play Console > Testing > Open testing must be enabled for this app.
+
+----
+
+This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
+
+More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
+
+The documentation of _fastlane_ can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
